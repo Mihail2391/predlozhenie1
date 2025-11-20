@@ -1,0 +1,755 @@
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Montserrat",
+        "Segoe UI", sans-serif;
+      background: #000;
+      color: #fff;
+      line-height: 1.4;
+    }
+
+    .page {
+      min-height: 100vh;
+      background: #000;
+      color: #fff;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1920px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    h1,
+    h2 {
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* === H1 на всю ширину экрана === */
+    h1 {
+      font-size: clamp(32px, 7vw, 150px);
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin: 190px 0 190px;
+    }
+
+    h2 {
+      font-size: 80px;
+      margin-bottom: 80px;
+      margin-top: 80px;
+    }
+
+    .divider {
+      margin: 56px 0 40px;
+      height: 1px;
+      width: 100%;
+      background: #ffffff;
+    }
+
+    .subline-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 22px;
+      letter-spacing: 0.1em;
+      color: #ffffff;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-outline {
+      border-radius: 999px;
+      padding: 10px 26px;
+      border: 1px solid #fff;
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      letter-spacing: 0.1em;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .btn-outline span {
+      font-size: 35px;
+    }
+
+    .btn-outline:hover {
+      background: #ffffff;
+      color: black;
+      border: 1px solid #000000;
+      transition-delay: 50ms;
+      transition-duration: 1s;
+    }
+
+    /* === HERO === */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+
+    .hero-title {
+      width: 100%;
+      max-width: none;
+      text-transform: uppercase;
+    }
+
+    .hero-title span {
+      display: block;
+    }
+
+    /* ================================
+       КАК МЫ РАБОТАЕМ — ОФОРМЛЕНИЕ
+       ================================= */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+      margin-top: 60px;
+      margin-bottom: 140px;
+    }
+
+    .process-card {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 38px 48px;
+      background: #050505;
+      border-radius: 28px;
+      border: 1px solid #2c2c2c;
+      box-shadow: 0 22px 50px rgba(0,0,0,0.85);
+    }
+
+    /* Левая часть — текст */
+    .process-inner {
+      flex: 1 1 auto;
+      max-width: 58%;          /* ← ширина текста */
+      margin-right: 80px;      /* ← расстояние между текстом и иконкой */
+    }
+
+    /* Заголовок пункта */
+    .process-index {
+      max-width: none;
+      width: 700px;
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    /* Описание */
+    .process-text {
+      margin-top: 35px;
+      font-size: 24px;
+      color: #eaeaea;
+      line-height: 1.55;
+    }
+
+    /* Правая часть — иконка */
+    .process-icon {
+      flex: 0 1 auto;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 130px;    /* ← регулировка по высоте */
+    }
+
+    /* Картинка */
+    .process-icon img {
+      width: 300px;         /* ← размер иконки */
+      height: auto;
+      filter: drop-shadow(0 18px 36px rgba(0,0,0,0.75));
+      display: block;
+    }
+
+    /* ====== ПОЧЕМУ ИМЕННО МЫ ====== */
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .why-card {
+      margin-bottom: 80px;
+      border-radius: 12px;
+      width: 100%;
+      height: auto;
+      position: relative;
+      border: 1px solid #ffffff;
+      padding: 18px 18px 26px;
+      background: #050505;
+      overflow: hidden;
+    }
+
+    .why-number {
+      position: absolute;
+      right: 10px;
+      bottom: -200px;
+      font-size: 500px;
+      font-weight: 800;
+      color: #C1E0A580;
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    .why-title {
+      font-size: 25px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 10px;
+    }
+
+    .why-text {
+      font-size: 18px;
+      color: #ffffff;
+      max-width: 340px;
+    }
+
+    /* ====== ПРОЕКТЫ / БЛОГ / CTA ====== */
+
+    .section-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .section-caption {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #8b8b8b;
+    }
+
+    /* подпись "Блог" со звездой */
+    .blog-caption {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 18px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    .blog-caption img.blog-icon {
+      width: 20px;
+      height: 20px;
+      display: block;
+      object-fit: contain;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .case-card {
+      background: #050505;
+      border: 1px solid #111;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* КАРТИНКИ В "НАШИ РАБОТЫ" */
+    .case-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .case-image--big {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .case-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 12px 10px;
+      font-size: 11px;
+      background: #000;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .case-footer strong {
+      color: #ffffff;
+      font-size: 24px;
+    }
+
+    .case-footer span {
+      color: #ffffff;
+      font-size: 18px;
+    }
+
+    /* ссылки в кейсах и в "Все кейсы / Все статьи" */
+    .case-link {
+      font-weight: 500;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #ffffff;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
+
+    .case-link::after {
+      margin-bottom: 5px;
+      content: "↗";
+      font-size: 18px;
+    }
+
+    .case-link:hover {
+      opacity: 0.8;
+    }
+
+    .section-caption a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .section-caption a:hover {
+      opacity: 0.8;
+    }
+
+    .projects-grid--bottom {
+      margin-top: 20px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .slider-row {
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .slide-card {
+      background: #050505;
+      border: 1px solid #111;
+      padding-bottom: 10px;
+    }
+
+    /* ОБЛАСТЬ КАРТИНКИ В БЛОГЕ */
+    .slide-image {
+      margin-top: 6px;
+      position: relative;
+      width: 100%;
+      height: 400px;      /* высота карточки на десктопе */
+      overflow: hidden;
+    }
+
+    .slide-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .slide-title {
+      padding: 10px 12px 0;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .slide-desc {
+      padding: 4px 12px 10px;
+      font-size: 11px;
+      color: #b5b5b5;
+    }
+
+    .slider-arrows {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 8px;
+      pointer-events: none;
+    }
+
+    .slider-arrow {
+      pointer-events: auto;
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      border: 1px solid #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.8);
+      font-size: 14px;
+    }
+
+    .cta {
+      padding-bottom: 290px;
+      margin-top: 96px;
+      text-align: center;
+    }
+
+    .cta-caption {
+      font-size: 22px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #ffffff;
+      margin-top: 290px;
+      margin-bottom: 15px;
+    }
+
+    .cta-title {
+      font-size: 118px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    /* =====================================
+       АДАПТИВ
+       ===================================== */
+
+    /* Планшеты и небольшие ноутбуки */
+    @media (max-width: 1200px) {
+      .container {
+        padding: 40px 20px 64px;
+      }
+
+      h1 {
+        margin: 140px 0 120px;
+        font-size: clamp(28px, 6vw, 90px);
+      }
+
+      h2 {
+        font-size: 52px;
+        margin-top: 60px;
+        margin-bottom: 48px;
+      }
+
+      .divider {
+        margin: 40px 0 32px;
+      }
+
+      .process-grid {
+        gap: 24px;
+        margin-bottom: 100px;
+      }
+
+      .process-card {
+        padding: 30px 36px;
+      }
+
+      .process-inner {
+        max-width: 60%;
+        margin-right: 48px;
+      }
+
+      .process-index {
+        font-size: 28px;
+      }
+
+      .process-text {
+        font-size: 18px;
+        margin-top: 24px;
+      }
+
+      .process-icon img {
+        width: 240px;
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .projects-grid {
+        gap: 16px;
+      }
+
+      .slider-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .slide-image {
+        height: 210px;
+      }
+
+      .cta-title {
+        font-size: 72px;
+      }
+    }
+
+    /* Планшеты / крупные телефоны в альбомной */
+    @media (max-width: 900px) {
+      .container {
+        padding: 32px 16px 56px;
+      }
+
+      h1 {
+        margin: 96px 0 72px;
+        font-size: clamp(26px, 6vw, 60px);
+      }
+
+      h2 {
+        font-size: 40px;
+        margin-top: 48px;
+        margin-bottom: 32px;
+      }
+
+      .subline-row {
+        font-size: 16px;
+        gap: 10px;
+      }
+
+      .btn-outline {
+        font-size: 14px;
+        padding: 8px 20px;
+      }
+
+      .btn-outline span {
+        font-size: 24px;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+        margin-bottom: 80px;
+        gap: 20px;
+      }
+
+      .process-card {
+        flex-direction: column;
+        padding: 26px 22px;
+      }
+
+      .process-inner {
+        max-width: 100%;
+        margin-right: 0;
+      }
+
+      .process-index {
+        width: 100%;
+        font-size: 24px;
+        letter-spacing: 0.12em;
+        margin-bottom: 10px;
+      }
+
+      .process-text {
+        margin-top: 18px;
+        font-size: 16px;
+      }
+
+      .process-icon {
+        margin-top: 20px;
+        justify-content: flex-start;
+      }
+
+      .process-icon img {
+        width: 190px;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .why-card {
+        margin-bottom: 32px;
+        padding: 16px 14px 20px;
+      }
+
+      .why-title {
+        font-size: 18px;
+      }
+
+      .why-text {
+        font-size: 14px;
+        max-width: 100%;
+      }
+
+      .why-number {
+        font-size: 260px;
+        bottom: -130px;
+        right: -10px;
+        opacity: 0.35;
+      }
+
+      .projects-grid,
+      .projects-grid--bottom {
+        grid-template-columns: 1fr;
+      }
+
+      .slider-row {
+        grid-template-columns: 1fr;
+        margin-top: 28px;
+      }
+
+      .slide-image {
+        height: 200px;
+      }
+
+      .blog-caption {
+        font-size: 16px;
+      }
+
+      .blog-caption img.blog-icon {
+        width: 18px;
+        height: 18px;
+      }
+
+      .cta-caption {
+        font-size: 16px;
+        margin-top: 120px;
+      }
+
+      .cta-title {
+        font-size: 40px;
+        margin-bottom: 20px;
+      }
+    }
+
+    /* Мобильные телефоны */
+    @media (max-width: 600px) {
+      .container {
+        padding: 24px 12px 40px;
+      }
+
+      h1 {
+        font-size: 26px;
+        margin: 72px 0 48px;
+        letter-spacing: -0.01em;
+      }
+
+      h2 {
+        font-size: 26px;
+        margin-top: 36px;
+        margin-bottom: 24px;
+      }
+
+      .divider {
+        margin: 24px 0 20px;
+      }
+
+      .subline-row {
+        font-size: 14px;
+        letter-spacing: 0.06em;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .btn-outline {
+        font-size: 13px;
+        padding: 8px 18px;
+      }
+
+      .btn-outline span {
+        font-size: 20px;
+      }
+
+      .process-card {
+        padding: 20px 16px;
+        border-radius: 18px;
+      }
+
+      .process-index {
+        font-size: 18px;
+        letter-spacing: 0.1em;
+      }
+
+      .process-text {
+        margin-top: 14px;
+        font-size: 14px;
+      }
+
+      .process-icon img {
+        width: 150px;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-card {
+        margin-bottom: 24px;
+      }
+
+      .why-title {
+        font-size: 16px;
+        letter-spacing: 0.12em;
+      }
+
+      .why-text {
+        font-size: 14px;
+      }
+
+      .why-number {
+        font-size: 200px;
+        bottom: -110px;
+        right: -20px;
+      }
+
+      .case-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 11px;
+      }
+
+      .slider-row {
+        gap: 16px;
+      }
+
+      .slide-image {
+        height: 180px;
+      }
+
+      .slide-title {
+        font-size: 14px;
+      }
+
+      .slide-desc {
+        font-size: 12px;
+      }
+
+      .blog-caption {
+        font-size: 14px;
+      }
+
+      .blog-caption img.blog-icon {
+        width: 16px;
+        height: 16px;
+      }
+
+      .cta {
+        margin-top: 64px;
+        padding-bottom: 140px;
+      }
+
+      .cta-caption {
+        font-size: 14px;
+        margin-top: 60px;
+      }
+
+      .cta-title {
+        font-size: 26px;
+        letter-spacing: 0.12em;
+      }
+    }
